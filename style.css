@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: hsl(243, 87%, 12%);
+    font-size: 18px;
+}
+
+header {
+    padding: 5%;
+    background-image: url("images/bg-curve-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Raleway";
+}
+
+.heading .list a {
+    margin: 0 25px;
+    color: hsl(243, 87%, 12%);
+    text-decoration: none;
+}
+
+h1, h2, button {
+    font-family: "Raleway";
+}
+
+button {
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    box-shadow: inset 100px 100px rgba(255, 255, 255, 0.4);
+    transition: .1s;
+}
+
+h1, h2 {
+    font-size: 2.4em;
+    line-height: 1.6;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.intro img {
+    width: 50%;
+}
+
+.info p{
+    margin: 20px 50px 20px 0;
+}
+
+input, button {
+    height: 50px;
+}
+
+input {
+    width: 25em;
+    margin-right: 20px;
+    border: 1px solid;
+    border-color: black black #999 black;
+    padding-left: 20px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+.check {
+    color: red;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.info input:invalid + button:focus + .check {
+    visibility: visible;
+}
+
+main {
+    background-color: hsl(240, 75%, 98%);
+}
+
+.work {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.work .illustration {
+    width: 45%;
+}
+
+.content p {
+    margin: 20px 100px 20px 0;
+}
+
+.content a {
+    color: hsl(170, 45%, 43%);
+    text-decoration: none;
+    border-bottom: 1px solid hsl(170, 45%, 43%);
+    padding-bottom: 3px;
+}
+
+.content a:hover {
+    color: hsl(170, 45%, 60%);
+    border-color: hsl(170, 45%, 60%);
+}
+
+.content a::after {
+    content: "";
+    display: inline-block;
+    background-image: url("images/icon-arrow.svg");
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.testimonial {
+    background-color: white;
+    margin: 50px 0;
+    padding: 30px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+    width: 55%;
+}
+
+.testimonial .quote {
+    display: block;
+    width: 20px;
+}
+
+.testimonial p {
+    margin: 20px 0;
+}
+
+.testimonial .person {
+    display: grid;
+    grid: repeat(2, auto) / 50px 1fr;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.testimonial .person img {
+    max-width: 100%;
+    grid-row: span 2;
+    border-radius: 50%;
+}
+
+.testimonial .person .name {
+    font-weight: 700;
+}
+
+.offer {
+    background-color: hsl(238, 22%, 44%);
+    padding: 5%;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    column-gap: 20%;
+    align-items: center;
+    height: 300px;
+}
+
+.offer .information h2 {
+    font-size: 2em;
+}
+
+.offer input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.offer button {
+    position: relative;
+}
+
+.offer button::before {
+    content: "Please check your email";
+    position: absolute;
+    top: -40px;
+    width: 300px;
+    left: 0;
+    text-align: left;
+    display: none;
+}
+
+.offer input:invalid + button:focus{
+    margin-top: 30px;
+}
+
+.offer input:invalid + button:focus::before {
+    display: block;
+}
+
+footer {
+    background-color: hsl(243, 87%, 12%);
+    padding: 8% 5% 5%;
+    display: grid;
+    grid: 30% / 40% 20% 20% 20%;
+    color: white;
+}
+
+.footer-logo {
+    grid-column: span 4;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: hsl(224, 93%, 58%);
+}
+
+footer .col-4 li{
+    display: inline-flex;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+footer .col-4 li:hover {
+    color: hsl(224, 93%, 58%);
+    border-color: hsl(224, 93%, 58%);
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        background-image: url("images/bg-curve-mobile.svg");
+    }
+
+    .heading .logo {
+        width: 100px;
+    }
+
+    .heading .list a {
+        margin: 0 5px;
+    }
+
+    .intro {
+        display: block;
+        text-align: center;
+    }
+
+    .intro img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .info p {
+        font-size: 1.3em;
+        margin: 40px 0;
+    }
+
+    .info input {
+        width: 100%;
+    }
+
+    .info button {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .work {
+        display: block;
+    }
+
+    .work .illustration {
+        width: 100%;
+    }
+
+    .work h2 {
+        text-align: center;
+        font-size: 2em;
+        margin: 100px 0 30px;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .offer {
+        display: flex;
+        text-align: center;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .offer p {
+        margin: 30px 0;
+    }
+
+    .offer button {
+        width: 100%;
+    }
+
+    footer {
+        display: block;
+        padding-top: 15%;
+    }
+
+    footer ul {
+        margin: 40px 0;
+    }
+
+    .col-4 {
+        text-align: center;
+    }
+
+}
+
+.attribution { display: none; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
