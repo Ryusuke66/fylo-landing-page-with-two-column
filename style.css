@@ -29,9 +29,13 @@ header {
     list-style:none;
 }
 
-.heading ul li a {
+.heading ul li {
+    display: inline-block;
     margin: 0 25px;
     color: hsl(243, 87%, 12%);
+}
+
+.heading ul li a {
     text-decoration: none;
 }
 
