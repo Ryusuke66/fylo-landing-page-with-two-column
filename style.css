@@ -58,6 +58,7 @@ h1, h2 {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 50%);
+    margin: 10% 0 20%;
 }
 
 .intro img {
