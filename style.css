@@ -25,7 +25,11 @@ header {
     font-family: "Raleway";
 }
 
-.heading .list a {
+.heading ul {
+    list-style:none;
+}
+
+.heading ul li a {
     margin: 0 25px;
     color: hsl(243, 87%, 12%);
     text-decoration: none;
