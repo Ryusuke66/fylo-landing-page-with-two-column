@@ -55,13 +55,14 @@ h1, h2 {
 }
 
 .intro {
-    display: flex;
+    display: grid;
     align-items: center;
-    flex-direction: row-reverse;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .intro img {
-    width: 50%;
+    width: 100%;
+    order: 2;
 }
 
 .info p{
