@@ -15,11 +15,11 @@
   <header>
     <div class="heading">
       <img src="images/logo.svg" alt="Fylo logo" class="logo">
-      <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Sign In</a></li>
-      </ul>
+      <div class="list">
+        <a href="#">Features</a>
+        <a href="#">Team</a>
+        <a href="#">Sign In</a>
+      </div>
     </div>
     <div class="intro">
       <img src="images/illustration-1.svg" alt="illustration of two people stacking files into document">
@@ -30,7 +30,7 @@
         family, and co-workers.</p>
         <form novalidate onsubmit="return false">
           <label for="email"></label>
-          <input type="email" name="email" placeholder="Enter your email...">
+          <input type="email" name="Email" id="email" placeholder="Enter your email...">
           <button>Get Started</button>
           <div class="check">Please check your email</div>
         </form>
@@ -66,8 +66,8 @@
         If you have any questions, our support team would be happy to help you.</p>
       </div>
       <form novalidate onsubmit="return false">
-        <label for="email"></label>
-        <input type="email" name="email" placeholder="email@example.com">
+        <label for="secondEmail"></label>
+        <input type="email" name="Email" id="secondEmail"placeholder="email@example.com">
         <button>Get Started For Free</button>
       </form>
     </div>
